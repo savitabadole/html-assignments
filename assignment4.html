@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script>
+
+function validationform(){
+var name-document.myform.name.value;
+var  password -document.myform.password.value;
+
+if (name==null || name ==""){
+alert("Name can't be blank"):
+return false;
+}
+else if (password.length<6){
+alert("Password must be at least 6 characters long.");
+return false;
+}
+var num ==document.myform.num.value;
+if(isNaN(num)){
+document. getElementById("numloc").innerHTML="Enter Numeric Vlaue Only";
+return false;
+}
+else{
+returntrue;
+}
+};
+</script>
+</head>
+<body>
+
+<form name = "myform" method = "post" action =  "abc.jsp" onsubmit = "return validationform()">
+Nane : <input type = "text" name = "name"></br>
+Passwword : <input type = "password" name = "password"></br>
+Number : <input type = "text" name = "num"><span id = "numloc"></span></br>
+<input type = "submit" value = "register">
+</form>
+</body>
+</html>
